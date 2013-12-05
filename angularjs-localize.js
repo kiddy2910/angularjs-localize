@@ -86,10 +86,10 @@ angular.module('services.localize', [])
                         if(paramIndex >= params.length) {
                             parts.push(paramNameWithToken);
                         } else {
-                            parts.push(params[paramIndex] || paramNameWithToken);
+                            parts.push(params[paramIndex] != null ? params[paramIndex] : paramNameWithToken);
                         }
                     } else {
-                        parts.push(params[paramName] || paramNameWithToken);
+                        parts.push(params[paramName] != null ? params[paramName] : paramNameWithToken);
                     }
 
                     paramIndex++;
